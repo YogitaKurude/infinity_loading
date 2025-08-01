@@ -1,0 +1,22 @@
+<div class="table-responsive scroll-container" (scroll)="onScroll($event)">
+    <table class="table table-bordered table-striped">
+        <thead class="table-light sticky-top">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Email</th>
+                <th scope="col">Company</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of displayedData; trackBy: trackById">
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.company }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- <div *ngIf="loading" class="text-center py-2 text-secondary">
+        Loading more users...
+    </div> -->
+</div>
